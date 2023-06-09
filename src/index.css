@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {font-family: "SB Sans";
+  src: url('./assets/font/SBSansInterface.ttf');
+  src: url("./assets/font/@font-face/37086b994764dba84b2ee0f1083bfeed.eot"); /* IE9*/
+  src: url("./assets/font/@font-face/37086b994764dba84b2ee0f1083bfeed.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("./assets/font/@font-face/37086b994764dba84b2ee0f1083bfeed.woff2") format("woff2"), /* chrome、firefox */
+  url("./assets/font/@font-face/37086b994764dba84b2ee0f1083bfeed.woff") format("woff"), /* chrome、firefox */
+  url("./assets/font/@font-face/37086b994764dba84b2ee0f1083bfeed.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("./assets/font/@font-face/37086b994764dba84b2ee0f1083bfeed.svg#SB Sans Interface") format("svg"); /* iOS 4.1- */
+}
+
+body {
+  height: 100vh;
+  color: #333333;
+  font-family: 'SB Sans', sans-serif;
+  background: #F4F4F5;
+  --primary-color: #5558FA;
+  --black-alpha8: rgba(0, 0, 0, 0.08);
+  --grey-stepper: #a6a6a6;
+  --blue-avatar: #d5e4f7;
+  --primary-text: #333333;
+  --black-alpha48: rgba(0, 0, 0, 0.48);
+  --black-alpha16: rgba(0, 0, 0, 0.16);
+  --black-alpha40: rgba(0, 0, 0, 0.4);
+  --black-alpha4: rgba(0, 0, 0, 0.04);
+}
+
+#root {
+  padding-top: 24px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
