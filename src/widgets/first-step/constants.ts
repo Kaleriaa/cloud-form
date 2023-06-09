@@ -1,6 +1,11 @@
 import { SystemStyleObject } from '@chakra-ui/react'
 import { FieldsId, FieldsName } from '@shared/constants'
-import { OptionBase } from 'chakra-react-select'
+import {
+    ChakraStylesConfig,
+    ControlProps,
+    GroupBase,
+    OptionBase,
+} from 'chakra-react-select'
 
 export const inputsStep1 = [
     {
@@ -44,7 +49,7 @@ export const sexFields: SexOption[] = [
 ]
 
 //TODO: fix any ControlProps<SexOption, true, GroupBase<SexOption>>
-export const selectStyleConfig = {
+export const selectStyleConfig: ChakraStylesConfig = {
     dropdownIndicator: (provided: SystemStyleObject) => ({
         ...provided,
         w: '40px',
@@ -69,33 +74,36 @@ export const selectStyleConfig = {
             borderColor: 'rgba(0, 0, 0, 0.30)',
         },
     }),
-    option: (provided: SystemStyleObject, state: any) => ({
+    option: (provided, state) => ({
         ...provided,
         fontFamily: 'SB Sans',
         color: '#333333',
         backgroundColor: state.isSelected ? '#cbccff' : 'white',
+        fontSize: '14px',
+        lineHeight: '20px',
     }),
-    placeholder: (provided: SystemStyleObject) => ({
+    placeholder: (provided) => ({
         ...provided,
         fontFamily: 'SB Sans',
         color: 'rgba(0, 0, 0, 0.48)',
     }),
-    group: (provided: SystemStyleObject) => ({
+    group: (provided) => ({
         ...provided,
         borderBottomWidth: '1px',
         _last: {
             borderBottomWidth: 0,
         },
     }),
-    menu: (provided: SystemStyleObject) => ({
+    menu: (provided) => ({
         ...provided,
         my: 0,
         borderRadius: 4,
         shadow: '0px 4px 20px rgba(0, 0, 0, 0.08)',
         borderWidth: '1px',
         borderColor: 'rgba(0, 0, 0, 0.08)',
+        h: '80px',
     }),
-    menuList: (provided: SystemStyleObject) => ({
+    menuList: (provided) => ({
         ...provided,
         borderWidth: 0,
     }),

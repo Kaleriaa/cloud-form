@@ -12,3 +12,24 @@ export const socialLinks = [
         link: 'https://drive.google.com/file/d/10sA16FnG-9EPjjc0-UsK9uGAkEUwJW9Z/view?usp=drive_link',
     },
 ]
+
+export const phoneMask = [
+    '+',
+    '7',
+    ' ',
+    '(',
+    /\d/,
+    /\d/,
+    /\d/,
+    ')',
+    ' ',
+    /\d/,
+    /\d/,
+    /\d/,
+    '-',
+    /\d/,
+    /\d/,
+    '-',
+    /\d/,
+    /\d/,
+]

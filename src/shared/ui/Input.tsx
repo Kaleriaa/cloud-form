@@ -6,7 +6,8 @@ type InputProps = {
     placeholder?: string
     value?: string
     disabled?: boolean
-    id: string
+    id?: string
+    className?: string
     onChange: () => void
 }
 
@@ -16,6 +17,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
             <InputWrapper
                 id={props.id}
                 ref={ref}
+                className={props.className}
                 value={props.value ?? ''}
                 placeholder={props.placeholder ?? 'Placeholder'}
                 type={props.type ?? 'text'}
@@ -42,5 +44,8 @@ const InputWrapper = styled.input`
     &:disabled {
         background-color: var(--black-alpha4);
         color: var(--black-alpha48);
+    }
+    @media (max-width: 450px) {
+        width: 85%;
     }
 `

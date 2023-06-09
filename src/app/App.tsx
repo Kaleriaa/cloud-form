@@ -9,7 +9,6 @@ import {
     theme,
 } from '@chakra-ui/react'
 
-//TODO: fix bag with /
 export const App = () => {
     return (
         <ThemeProvider theme={theme}>

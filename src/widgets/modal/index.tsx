@@ -11,8 +11,8 @@ export const Modal = () => {
             {isVisible &&
                 ReactDOM.createPortal(
                     <Overlay>
-                        {/* <Success /> */}
-                        <Error />
+                        <Success />
+                        {/* <Error /> */}
                     </Overlay>,
                     document.body,
                 )}

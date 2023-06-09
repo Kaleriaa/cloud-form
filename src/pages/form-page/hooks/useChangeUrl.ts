@@ -7,7 +7,7 @@ export const useChangeUrl = () => {
     let next = ''
     switch (pathname) {
         case RoutePaths.STEP1:
-            back = BASE_PATH
+            back = `${BASE_PATH}/`
             next = RoutePaths.STEP2
             break
         case RoutePaths.STEP2:

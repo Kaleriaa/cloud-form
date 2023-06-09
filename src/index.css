@@ -17,6 +17,7 @@
 body {
   height: 100vh;
   color: #333333;
+  line-height: 1;
   font-family: 'SB Sans', sans-serif;
   background: #F4F4F5;
   --primary-color: #5558FA;
@@ -36,4 +37,8 @@ body {
   justify-content: center;
   width: 100%;
   height: 100vh;
+
+  @media (max-width: 900px) {
+    padding-top: 0;
+  }
 }

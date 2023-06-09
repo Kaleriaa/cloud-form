@@ -43,9 +43,12 @@ export const FormPage = () => {
                     <Outlet />
                 </Form>
                 <ButtonWrapper>
-                    <Link to={back}>
-                        <BackButton label="Назад" id={FieldsId.BACK} />
-                    </Link>
+                    <BackButton
+                        label="Назад"
+                        onClick={() => navigate(back)}
+                        id={FieldsId.BACK}
+                    />
+
                     {pathname === RoutePaths.STEP3 ? (
                         <SubmitButton
                             style={BtnStyleConfig}

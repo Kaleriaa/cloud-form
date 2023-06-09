@@ -16,6 +16,7 @@ export const Tip = ({ isError, tip, error }: TipProps) => {
 
 const HelperText = styled.span`
     font-weight: 400;
+    line-height: 20px;
     font-size: 12px;
     color: var(--black-alpha48);
 `

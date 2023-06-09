@@ -11,7 +11,7 @@ export const ThirdStep = () => {
 
     return (
         <FormWrapperStep3>
-            <InputLabel label={FieldsName.ABOUT} />
+            <InputLabel label="About" />
             <Controller
                 name={FieldsName.ABOUT}
                 control={control}

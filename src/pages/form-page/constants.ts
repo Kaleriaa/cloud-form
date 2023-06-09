@@ -1,6 +1,6 @@
 import { RoutePaths } from '@shared/constants'
 import { schemaStep1 } from '@widgets/first-step/schema'
-import { schemaStep2 } from '@widgets/step2/schema'
+import { schemaStep2 } from '@widgets/second-step/schema'
 import { schemaStep3 } from '@widgets/third-step/schema'
 
 type Schema = typeof schemaStep1 | typeof schemaStep2 | typeof schemaStep3

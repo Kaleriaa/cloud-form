@@ -10,6 +10,9 @@ export const MainFrame = styled.div`
     display: flex;
     flex-direction: column;
     gap: 24px;
+    @media (max-width: 480px) {
+        height: 100vh;
+    }
 `
 export const PersonalInfoWrapper = styled.div`
     display: flex;

@@ -12,7 +12,6 @@ export const RoutePathsIndex = [
     RoutePaths.STEP3,
 ]
 
-//TODO: sername or surname
 export enum FieldsName {
     PHONE = 'phone',
     EMAIL = 'email',
@@ -27,7 +26,7 @@ export enum FieldsName {
 export enum FieldsId {
     NICKNAME = 'field-nickname',
     NAME = 'field-name',
-    SURNAME = 'field-surname',
+    SURNAME = 'field-sername',
     ABOUT = 'field-about',
     START = 'button-start',
     BACK = 'button-back',

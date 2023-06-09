@@ -8,20 +8,25 @@ import { FieldsId } from '@shared/constants'
 
 export const Error = () => {
     return (
-        <ErrorWindow>
+        <Window>
             <Header>
                 <Title>Ошибка</Title>
                 <img src={Close} />
             </Header>
-            <img src={ErrorSVG} height={80} width={80} />
-            <ButtonUI label="Закрыть" id={FieldsId.CLOSE} />
-        </ErrorWindow>
+            <Image src={ErrorSVG} height={80} width={80} />
+            <CloseButton label="Закрыть" id={FieldsId.CLOSE} />
+        </Window>
     )
 }
 
-const ErrorWindow = styled(Window)``
 const Header = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+`
+const Image = styled.img`
+    align-self: center;
+`
+const CloseButton = styled(ButtonUI)`
+    align-self: flex-end;
 `

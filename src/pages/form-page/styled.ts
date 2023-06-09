@@ -12,6 +12,14 @@ export const Layout = styled.form`
     flex-direction: column;
     gap: 4.125em;
     padding: 62px 110px 80px 110px;
+    @media (max-width: 678px) {
+        padding: 42px 80px 60px 80px;
+    }
+    @media (max-width: 480px) {
+        padding: 42px 55px 30px 55x;
+        max-height: 100%;
+        height: 100vh;
+    }
 `
 export const BackButton = styled(ButtonUI)`
     color: var(--primary-color);
@@ -22,6 +30,9 @@ export const ButtonWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    @media (max-width: 480px) {
+        margin-top: 15px;
+    }
 `
 export const Form = styled.div`
     display: flex;

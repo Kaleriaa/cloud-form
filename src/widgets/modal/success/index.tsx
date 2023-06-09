@@ -11,7 +11,7 @@ export const Success = () => {
         <SuccessWindow>
             <Title>Форма успешно отправлена</Title>
             <img src={SuccessSVG} />
-            <Link to={BASE_PATH}>
+            <Link to={`${BASE_PATH}/`}>
                 <ButtonUI label="На главную" id={FieldsId.TOMAIN} />
             </Link>
         </SuccessWindow>

@@ -43,6 +43,7 @@ export const FirstStep = () => {
                             options={sexFields}
                             placeholder="Не выбрано"
                             isSearchable={false}
+                            menuPortalTarget={document.body}
                         />
                     )}
                 />

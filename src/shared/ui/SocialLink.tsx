@@ -34,5 +34,6 @@ const Link = styled.a`
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 400;
+    line-height: 20px;
     font-size: 12px;
 `
