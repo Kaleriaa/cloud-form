@@ -1,4 +1,4 @@
-import { AppDispatch, useAppDispatch } from '@shared/store'
+import { useAppDispatch } from '@shared/store'
 import { useSendFormMutation } from '../../shared/api'
 import { openModal } from '@entities/modal/slice'
 import { prepareData } from '@features/prepare-data/prepareData'

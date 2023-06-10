@@ -5,13 +5,13 @@
 }
 
 @font-face {font-family: "SB Sans";
-  src: url('./assets/font/SBSansInterface.ttf');
-  src: url("./assets/font/@font-face/37086b994764dba84b2ee0f1083bfeed.eot"); /* IE9*/
-  src: url("./assets/font/@font-face/37086b994764dba84b2ee0f1083bfeed.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-  url("./assets/font/@font-face/37086b994764dba84b2ee0f1083bfeed.woff2") format("woff2"), /* chrome、firefox */
-  url("./assets/font/@font-face/37086b994764dba84b2ee0f1083bfeed.woff") format("woff"), /* chrome、firefox */
-  url("./assets/font/@font-face/37086b994764dba84b2ee0f1083bfeed.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url("./assets/font/@font-face/37086b994764dba84b2ee0f1083bfeed.svg#SB Sans Interface") format("svg"); /* iOS 4.1- */
+  src: url('/font/SBSansInterface.ttf');
+  src: url("/font/@font-face/37086b994764dba84b2ee0f1083bfeed.eot"); /* IE9*/
+  src: url("/font/@font-face/37086b994764dba84b2ee0f1083bfeed.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("/font/@font-face/37086b994764dba84b2ee0f1083bfeed.woff2") format("woff2"), /* chrome、firefox */
+  url("/font/@font-face/37086b994764dba84b2ee0f1083bfeed.woff") format("woff"), /* chrome、firefox */
+  url("/font/@font-face/37086b994764dba84b2ee0f1083bfeed.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("/font/@font-face/37086b994764dba84b2ee0f1083bfeed.svg#SB Sans Interface") format("svg"); /* iOS 4.1- */
 }
 
 body {

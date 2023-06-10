@@ -22,6 +22,7 @@ export const TitleWrapper = styled.div`
 export const StepActive = styled.div`
     position: relative;
     width: 16px;
+    cursor: pointer;
     height: 16px;
     background-color: var(--primary-color);
     border-radius: 50%;
@@ -37,17 +38,22 @@ export const StepActive = styled.div`
         border-radius: 50%;
     }
 `
+
 export const StepIncomplete = styled.span`
+    cursor: pointer;
     background-color: var(--grey-stepper);
     width: 16px;
     height: 16px;
     border-radius: 50%;
     z-index: 10;
 `
+
 export const StepperTheme = styled(Stepper)`
     color: var(--grey-stepper);
 `
+
 export const StepSeparatopTheme = styled(StepSeparator)``
+
 export const StepStyled = styled(Step)`
     gap: 0;
     div[data-status='complete'] {
