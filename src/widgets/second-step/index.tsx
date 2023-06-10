@@ -1,4 +1,3 @@
-import React from 'react'
 import { AddAdvantages } from '@features/add-advantages'
 import { CheckBoxGroup, RadioGroup } from './components'
 import { FormWrapperSteps } from '@shared/ui'

@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 export const InputLabel = ({ label }: Record<'label', string>) => {

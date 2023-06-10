@@ -63,11 +63,13 @@ export const RadioWrapper = styled.div`
         transform: scale(1);
     }
 `
+
 export const GroupName = styled.span`
     font-weight: 400;
     font-size: 14px;
     color: var(--primary-text);
 `
+
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;

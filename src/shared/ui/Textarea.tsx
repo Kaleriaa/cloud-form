@@ -38,6 +38,7 @@ const TextAreaWrapper = styled.div`
     width: 100%;
     position: relative;
 `
+
 const Area = styled.textarea`
     outline: none;
     width: 100%;
@@ -49,6 +50,7 @@ const Area = styled.textarea`
     font-size: 14px;
     color: var(--primary-text);
 `
+
 const Counter = styled.span`
     position: absolute;
     bottom: 5px;

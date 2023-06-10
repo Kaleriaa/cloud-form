@@ -12,7 +12,6 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { RoutePaths, RoutePathsIndex } from '@shared/constants'
 import { useFormContext } from 'react-hook-form'
 
-//TODO fix onclick
 export const FormStepper = () => {
     const { pathname } = useLocation()
     const methods = useFormContext()

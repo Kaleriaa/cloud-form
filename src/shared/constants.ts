@@ -1,4 +1,5 @@
 export const BASE_PATH = '/cloud-form'
+export const API_BASE_URL = 'https://api.sbercloud.ru/content/v1/'
 
 export enum RoutePaths {
     STEP1 = '/cloud-form/form/step1',
@@ -6,6 +7,7 @@ export enum RoutePaths {
     STEP3 = '/cloud-form/form/step3',
 }
 
+//TODO: separete
 export const RoutePathsIndex = [
     RoutePaths.STEP1,
     RoutePaths.STEP2,
@@ -23,6 +25,7 @@ export enum FieldsName {
     RADIO = 'radio',
     CHECKBOX = 'checkbox',
 }
+
 export enum FieldsId {
     NICKNAME = 'field-nickname',
     NAME = 'field-name',

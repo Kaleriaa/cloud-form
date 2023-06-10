@@ -3,12 +3,13 @@ import styled from 'styled-components'
 export const Overlay = styled.div`
     background: rgba(0, 0, 0, 0.16);
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: absolute;
     left: 0;
     top: 0;
-    display: grid;
-    place-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
 export const Window = styled.div`
@@ -21,8 +22,13 @@ export const Window = styled.div`
     flex-direction: column;
     justify-content: space-between;
     padding: 32px;
+    @media (max-width: 500px) {
+        width: 80%;
+    }
 `
+
 export const Title = styled.span`
     font-weight: 600;
     font-size: 20px;
+    text-align: center;
 `

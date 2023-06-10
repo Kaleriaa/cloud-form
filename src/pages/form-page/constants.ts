@@ -1,14 +1,18 @@
 import { RoutePaths } from '@shared/constants'
-import { schemaStep1 } from '@widgets/first-step/schema'
-import { schemaStep2 } from '@widgets/second-step/schema'
-import { schemaStep3 } from '@widgets/third-step/schema'
+import { FIRST_STEP_SCHEMA } from '@widgets/first-step/schema'
+import { SECOND_STEP_SCHEMA } from '@widgets/second-step/schema'
+import { THIRD_STEP_SCHEMA } from '@widgets/third-step/schema'
 
-type Schema = typeof schemaStep1 | typeof schemaStep2 | typeof schemaStep3
+type SchemaSteps =
+    | typeof FIRST_STEP_SCHEMA
+    | typeof SECOND_STEP_SCHEMA
+    | typeof THIRD_STEP_SCHEMA
 
-export const schemasYup = new Map<RoutePaths, Schema>()
-schemasYup.set(RoutePaths.STEP1, schemaStep1)
-schemasYup.set(RoutePaths.STEP2, schemaStep2)
-schemasYup.set(RoutePaths.STEP3, schemaStep3)
+export const schemasYup: Record<RoutePaths, SchemaSteps> = {
+    [RoutePaths.STEP1]: FIRST_STEP_SCHEMA,
+    [RoutePaths.STEP2]: SECOND_STEP_SCHEMA,
+    [RoutePaths.STEP3]: THIRD_STEP_SCHEMA,
+}
 
 export const defaultAdvantages: { value: string }[] = [
     { value: '' },

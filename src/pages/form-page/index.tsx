@@ -1,10 +1,13 @@
+import { FormData } from '@entities/form-data/type'
+import { useSendForm } from '@features/send-form/useSendForm'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { FieldsId, RoutePaths } from '@shared/constants'
 import { ButtonUI } from '@shared/ui'
 import { FormStepper } from '@widgets/stepper'
 import { FormProvider, useForm } from 'react-hook-form'
-import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom'
+import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { defaultAdvantages, schemasYup } from './constants'
+import { useChangeUrl } from './hooks/useChangeUrl'
 import {
     BackButton,
     BtnStyleConfig,
@@ -13,17 +16,15 @@ import {
     Layout,
     SubmitButton,
 } from './styled'
-import { useChangeUrl } from './hooks/useChangeUrl'
 
 export const FormPage = () => {
     const { pathname } = useLocation()
     const { next, back } = useChangeUrl()
     const navigate = useNavigate()
+    const onSubmit = useSendForm()
 
-    const resolver = schemasYup.get(pathname as RoutePaths)
-
-    const methods = useForm({
-        resolver: resolver && yupResolver(resolver),
+    const methods = useForm<FormData>({
+        resolver: yupResolver(schemasYup[pathname as RoutePaths]),
         defaultValues: {
             advantages: defaultAdvantages,
         },
@@ -36,8 +37,7 @@ export const FormPage = () => {
 
     return (
         <FormProvider {...methods}>
-            <Layout
-                onSubmit={methods.handleSubmit((data) => console.log(data))}>
+            <Layout onSubmit={methods.handleSubmit(onSubmit)}>
                 <FormStepper />
                 <Form>
                     <Outlet />

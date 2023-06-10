@@ -1,6 +1,6 @@
 import * as yup from 'yup'
 
-export const schemaStep1 = yup
+export const FIRST_STEP_SCHEMA = yup
     .object({
         nickname: yup
             .string()

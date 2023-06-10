@@ -1,5 +1,4 @@
 import { Avatar, SocialLink } from '@shared/ui'
-import React from 'react'
 import { Info, Links, Name, PersonalInfoWrapper } from '../styled'
 import { socialLinks } from '../constants'
 

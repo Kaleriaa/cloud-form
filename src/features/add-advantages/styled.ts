@@ -7,11 +7,13 @@ export const Row = styled.div`
     align-items: center;
     gap: 18.5px;
 `
+
 export const WrapperAdvantages = styled.div`
     display: flex;
     flex-direction: column;
     gap: 8px;
 `
+
 export const AddButton = styled(ButtonUI)`
     background-color: #fff;
     color: var(--primary-color);
@@ -21,6 +23,7 @@ export const AddButton = styled(ButtonUI)`
     display: grid;
     place-content: center;
 `
+
 export const Trash = styled.img`
     cursor: pointer;
 `

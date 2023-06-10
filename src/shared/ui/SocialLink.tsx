@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 type LinkProps = Record<'link' | 'label', string>
@@ -25,11 +24,13 @@ export const SocialLink = ({ link, label }: LinkProps) => {
         </Wrapper>
     )
 }
+
 const Wrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 5.6px;
 `
+
 const Link = styled.a`
     color: var(--primary-color);
     text-decoration: none;

@@ -1,13 +1,12 @@
 import { SystemStyleObject } from '@chakra-ui/react'
 import { FieldsId, FieldsName } from '@shared/constants'
-import {
-    ChakraStylesConfig,
-    ControlProps,
-    GroupBase,
-    OptionBase,
-} from 'chakra-react-select'
+import { ChakraStylesConfig, OptionBase } from 'chakra-react-select'
 
-export const inputsStep1 = [
+export const INPUTS_STEP_1: {
+    label: string
+    name: FieldsName
+    id: FieldsId
+}[] = [
     {
         label: 'Nickname',
         name: FieldsName.NICKNAME,
@@ -35,7 +34,8 @@ export interface SexOption extends OptionBase {
     value: string
     id: string
 }
-export const sexFields: SexOption[] = [
+
+export const SEX_FIELDS: SexOption[] = [
     {
         value: Sex.MAN,
         label: Sex.MAN,
@@ -48,8 +48,7 @@ export const sexFields: SexOption[] = [
     },
 ]
 
-//TODO: fix any ControlProps<SexOption, true, GroupBase<SexOption>>
-export const selectStyleConfig: ChakraStylesConfig = {
+export const SELECT_STYLES_CONFIG: ChakraStylesConfig = {
     dropdownIndicator: (provided: SystemStyleObject) => ({
         ...provided,
         w: '40px',
@@ -59,6 +58,7 @@ export const selectStyleConfig: ChakraStylesConfig = {
     container: (provided: SystemStyleObject) => ({
         ...provided,
         w: '300px',
+        '@media (max-width: 495px)': { width: '85%' },
     }),
     control: (provided: SystemStyleObject) => ({
         ...provided,

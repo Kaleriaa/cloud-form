@@ -1,22 +1,31 @@
-import React from 'react'
 import { Title, Window } from '../styled'
 import { ButtonUI } from '@shared/ui'
 import SuccessSVG from './success.svg'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { BASE_PATH, FieldsId } from '@shared/constants'
+import { ModalStates } from '..'
 
-export const Success = () => {
+export const Success = ({ onClose }: ModalStates) => {
+    const navigate = useNavigate()
+    const toMainPage = () => {
+        onClose()
+        navigate(`${BASE_PATH}/`)
+    }
+
     return (
         <SuccessWindow>
             <Title>Форма успешно отправлена</Title>
             <img src={SuccessSVG} />
-            <Link to={`${BASE_PATH}/`}>
-                <ButtonUI label="На главную" id={FieldsId.TOMAIN} />
-            </Link>
+            <ButtonUI
+                label="На главную"
+                onClick={toMainPage}
+                id={FieldsId.TOMAIN}
+            />
         </SuccessWindow>
     )
 }
+
 const SuccessWindow = styled(Window)`
     align-items: center;
 `

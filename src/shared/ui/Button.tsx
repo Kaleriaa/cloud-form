@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 type ButtonProps = {
@@ -24,9 +23,10 @@ const Block = styled.button`
     font-weight: 400;
     font-size: 14px;
     padding: 12px 16px;
+    height: 44px;
     border-radius: 4px;
     border: 1px solid var(--primary-color);
     &:hover {
-        filter: darken(92%);
+        filter: brightness(115%);
     }
 `

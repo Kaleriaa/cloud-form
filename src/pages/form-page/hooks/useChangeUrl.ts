@@ -5,6 +5,7 @@ export const useChangeUrl = () => {
     const { pathname } = useLocation()
     let back = ''
     let next = ''
+
     switch (pathname) {
         case RoutePaths.STEP1:
             back = `${BASE_PATH}/`
@@ -18,5 +19,6 @@ export const useChangeUrl = () => {
             back = RoutePaths.STEP2
             next = pathname
     }
+
     return { back, next }
 }

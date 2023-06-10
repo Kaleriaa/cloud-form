@@ -2,7 +2,7 @@ import { FormWrapperSteps, Input, InputLabel, Tip } from '@shared/ui'
 import { Select } from 'chakra-react-select'
 import { useFormContext, Controller } from 'react-hook-form'
 import styled from 'styled-components'
-import { inputsStep1, selectStyleConfig, sexFields } from './constants'
+import { INPUTS_STEP_1, SELECT_STYLES_CONFIG, SEX_FIELDS } from './constants'
 
 export const FirstStep = () => {
     const {
@@ -12,7 +12,7 @@ export const FirstStep = () => {
 
     return (
         <FormWrapperSteps>
-            {inputsStep1.map(({ id, label, name }) => {
+            {INPUTS_STEP_1.map(({ id, label, name }) => {
                 return (
                     <Wrapper key={id}>
                         <InputLabel label={label} />
@@ -39,8 +39,8 @@ export const FirstStep = () => {
                             {...field}
                             id="field-sex"
                             useBasicStyles
-                            chakraStyles={selectStyleConfig}
-                            options={sexFields}
+                            chakraStyles={SELECT_STYLES_CONFIG}
+                            options={SEX_FIELDS}
                             placeholder="Не выбрано"
                             isSearchable={false}
                             menuPortalTarget={document.body}
@@ -51,9 +51,11 @@ export const FirstStep = () => {
         </FormWrapperSteps>
     )
 }
+
 const Wrapper = styled(FormWrapperSteps)`
     gap: 8px;
 `
+
 const SelectWrapper = styled(Wrapper)`
     margin-bottom: 22px;
 `

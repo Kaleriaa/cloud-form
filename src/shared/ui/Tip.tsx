@@ -1,7 +1,11 @@
-import React from 'react'
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
-type TipProps = { isError: boolean; tip: string; error: string | undefined }
+type TipProps = {
+    isError: boolean
+    tip: string
+    error: string | undefined
+}
+
 export const Tip = ({ isError, tip, error }: TipProps) => {
     return (
         <>
@@ -20,6 +24,7 @@ const HelperText = styled.span`
     font-size: 12px;
     color: var(--black-alpha48);
 `
+
 const ErrorMessage = styled(HelperText)`
     color: red;
 `

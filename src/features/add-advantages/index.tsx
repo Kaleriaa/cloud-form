@@ -7,6 +7,7 @@ import { FieldsId, FieldsName } from '@shared/constants'
 type AdvantagesProps = {
     label: string
 }
+
 export const AddAdvantages = ({ label }: AdvantagesProps) => {
     const { control } = useFormContext()
 
@@ -14,6 +15,9 @@ export const AddAdvantages = ({ label }: AdvantagesProps) => {
         control,
         name: FieldsName.ADVANTAGES,
     })
+
+    const handleRemove = (index: number) => () =>
+        fields.length === 1 || remove(index)
 
     return (
         <WrapperAdvantages>
@@ -34,7 +38,7 @@ export const AddAdvantages = ({ label }: AdvantagesProps) => {
                         <Trash
                             src={TrashSVG}
                             id={`button-remove-${fields.length + 1}`}
-                            onClick={() => fields.length === 1 || remove(index)}
+                            onClick={handleRemove(index)}
                         />
                     </Row>
                 )

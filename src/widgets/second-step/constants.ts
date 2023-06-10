@@ -1,6 +1,6 @@
 import { FieldsName } from '@shared/constants'
 
-export const checkBoxGroup = [
+export const CHECKBOX_GROUP = [
     {
         value: '1',
         name: FieldsName.CHECKBOX,
@@ -18,7 +18,7 @@ export const checkBoxGroup = [
     },
 ]
 
-export const radioGroup = [
+export const RADIO_GROUP = [
     {
         value: '1',
         name: FieldsName.RADIO,

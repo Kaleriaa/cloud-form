@@ -1,19 +1,18 @@
-import React from 'react'
-import { radioGroup } from '../constants'
+import { FieldsName } from '@shared/constants'
+import { RADIO_GROUP } from '../constants'
 import { GroupName, Label, RadioWrapper, Wrapper } from './styled'
 import { useFormContext } from 'react-hook-form'
-import { SchemaFieldStep2 } from '../schema'
 
 export const RadioGroup = () => {
     const { register } = useFormContext()
     return (
         <Wrapper>
             <GroupName>Radio group</GroupName>
-            {radioGroup.map(({ value, id }) => {
+            {RADIO_GROUP.map(({ value, id }) => {
                 return (
                     <RadioWrapper key={id}>
                         <input
-                            {...register(SchemaFieldStep2.RADIO)}
+                            {...register(FieldsName.RADIO)}
                             type="radio"
                             key={id}
                             name="radio"

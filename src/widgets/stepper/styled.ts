@@ -6,6 +6,7 @@ export const StepperWrapper = styled.div`
     flex-direction: column;
     gap: 12px;
 `
+
 export const TitleWrapper = styled.div`
     width: calc(100% - 10px);
     margin: 0 auto;
@@ -17,6 +18,7 @@ export const TitleWrapper = styled.div`
         font-size: 14px;
     }
 `
+
 export const StepActive = styled.div`
     position: relative;
     width: 16px;

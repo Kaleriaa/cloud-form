@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 type InputProps = {
     type?: string
@@ -28,7 +28,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     },
 )
 
-const InputWrapper = styled.input`
+export const InputStyles = css`
     outline: none;
     border: 1px solid var(--black-alpha16);
     background-color: #ffffff;
@@ -45,7 +45,11 @@ const InputWrapper = styled.input`
         background-color: var(--black-alpha4);
         color: var(--black-alpha48);
     }
-    @media (max-width: 450px) {
+`
+
+const InputWrapper = styled.input`
+    ${InputStyles};
+    @media (max-width: 495px) {
         width: 85%;
     }
 `

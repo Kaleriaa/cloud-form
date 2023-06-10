@@ -1,8 +1,9 @@
+import { FieldsName } from '@shared/constants'
 import * as yup from 'yup'
 
-export const schemaStep2 = yup
+export const SECOND_STEP_SCHEMA = yup
     .object({
-        advantages: yup.array().of(
+        [FieldsName.ADVANTAGES]: yup.array().of(
             yup
                 .object()
                 .shape({
@@ -10,13 +11,11 @@ export const schemaStep2 = yup
                 })
                 .required('Advantages is required'),
         ),
-        checkbox: yup.array().of(yup.number().required()).min(1).required(),
-        radio: yup.string().required('An option is required'),
+        [FieldsName.CHECKBOX]: yup
+            .array()
+            .of(yup.number().required())
+            .min(1)
+            .required(),
+        [FieldsName.RADIO]: yup.string().required('An option is required'),
     })
     .required()
-
-export enum SchemaFieldStep2 {
-    ADVANTAGES = 'advantages',
-    CHECKBOX = 'checkbox',
-    RADIO = 'radio',
-}
