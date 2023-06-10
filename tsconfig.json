@@ -22,6 +22,7 @@
             "@features/*": ["features/*"],
             "@shared/*": ["shared/*"],
             "@shared/ui/*": ["shared/ui/*"],
+            "@shared/constants/*": ["shared/constants/*"],
             "@widgets/*": ["widgets/*"],
             "@pages/*": ["pages/*"],
             "@pages": ["pages"],

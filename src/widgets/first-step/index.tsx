@@ -3,6 +3,12 @@ import { Select } from 'chakra-react-select'
 import { useFormContext, Controller } from 'react-hook-form'
 import styled from 'styled-components'
 import { INPUTS_STEP_1, SELECT_STYLES_CONFIG, SEX_FIELDS } from './constants'
+import { FieldsName } from '@shared/constants'
+
+// У React Select нет нормальной возможности установить кастомный id для option'а
+const Option = (option: { id: string; label: string }) => {
+    return <div id={option.id}>{option.label}</div>
+}
 
 export const FirstStep = () => {
     const {
@@ -32,13 +38,15 @@ export const FirstStep = () => {
             <SelectWrapper>
                 <InputLabel label="Sex" />
                 <Controller
-                    name="sex"
+                    name={FieldsName.SEX}
                     control={control}
                     render={({ field }) => (
                         <Select
                             {...field}
-                            id="field-sex"
+                            inputId="field-sex"
                             useBasicStyles
+                            // Типы для React Select описаны не совсем точно и getOptionLabel умеет возвращать ReactNode
+                            getOptionLabel={Option as unknown as () => string}
                             chakraStyles={SELECT_STYLES_CONFIG}
                             options={SEX_FIELDS}
                             placeholder="Не выбрано"
@@ -46,6 +54,11 @@ export const FirstStep = () => {
                             menuPortalTarget={document.body}
                         />
                     )}
+                />
+                <Tip
+                    isError={!errors.sex}
+                    tip={FieldsName.SEX}
+                    error={errors.sex?.message as string}
                 />
             </SelectWrapper>
         </FormWrapperSteps>
@@ -56,6 +69,4 @@ const Wrapper = styled(FormWrapperSteps)`
     gap: 8px;
 `
 
-const SelectWrapper = styled(Wrapper)`
-    margin-bottom: 22px;
-`
+const SelectWrapper = styled(Wrapper)``

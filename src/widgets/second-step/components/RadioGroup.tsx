@@ -15,7 +15,7 @@ export const RadioGroup = () => {
                             {...register(FieldsName.RADIO)}
                             type="radio"
                             key={id}
-                            name="radio"
+                            name={FieldsName.RADIO}
                             id={id}
                             value={value}
                         />

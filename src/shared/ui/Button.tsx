@@ -5,17 +5,18 @@ type ButtonProps = {
     onClick?: () => void
     id: string
     className?: string
+    type?: 'button' | 'submit' | 'reset'
 }
 
-export const ButtonUI = ({ label, onClick, id, className }: ButtonProps) => {
+export const ButtonUI = ({ label, type = 'button', ...rest }: ButtonProps) => {
     return (
-        <Block className={className} id={id} onClick={onClick}>
+        <Wrapper {...rest} type={type}>
             {label}
-        </Block>
+        </Wrapper>
     )
 }
 
-const Block = styled.button`
+const Wrapper = styled.button`
     cursor: pointer;
     width: fit-content;
     background-color: var(--primary-color);

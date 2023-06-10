@@ -1,19 +1,3 @@
-export const BASE_PATH = '/cloud-form'
-export const API_BASE_URL = 'https://api.sbercloud.ru/content/v1/'
-
-export enum RoutePaths {
-    STEP1 = '/cloud-form/form/step1',
-    STEP2 = '/cloud-form/form/step2',
-    STEP3 = '/cloud-form/form/step3',
-}
-
-//TODO: separete
-export const RoutePathsIndex = [
-    RoutePaths.STEP1,
-    RoutePaths.STEP2,
-    RoutePaths.STEP3,
-]
-
 export enum FieldsName {
     PHONE = 'phone',
     EMAIL = 'email',
@@ -24,6 +8,7 @@ export enum FieldsName {
     ADVANTAGES = 'advantages',
     RADIO = 'radio',
     CHECKBOX = 'checkbox',
+    SEX = 'sex',
 }
 
 export enum FieldsId {
@@ -35,10 +20,8 @@ export enum FieldsId {
     BACK = 'button-back',
     NEXT = 'button-next',
     SEX = 'field-sex',
-    ADDINPUT = 'button-add',
+    ADD_INPUT = 'button-add',
     SEND = 'button-send',
     CLOSE = 'button-close',
-    TOMAIN = 'button-to-main',
-    PHONE = 'field-phone',
-    EMAIL = 'field-email',
+    TO_MAIN = 'button-to-main',
 }

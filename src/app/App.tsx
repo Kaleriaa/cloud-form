@@ -1,7 +1,6 @@
 import { Modal, FirstStep, SecondStep, ThirdStep } from '@widgets'
 import { MainPage, FormPage } from '@pages'
 import { Routes, Route, Outlet, Navigate } from 'react-router-dom'
-import { BASE_PATH } from '@shared/constants'
 import { Provider } from 'react-redux'
 import {
     CSSReset,
@@ -10,8 +9,8 @@ import {
     theme,
 } from '@chakra-ui/react'
 import { store } from '@shared/store'
+import { BASE_PATH } from '@shared/constants'
 
-//TODO: redirect on first step
 export const App = () => {
     return (
         <Provider store={store}>

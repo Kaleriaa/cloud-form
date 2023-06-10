@@ -1,12 +1,12 @@
 import { FormData } from '@entities/form-data/type'
 import { useSendForm } from '@features/send-form/useSendForm'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { FieldsId, RoutePaths } from '@shared/constants'
+import { FieldsId, FieldsName, RoutePaths } from '@shared/constants'
 import { ButtonUI } from '@shared/ui'
 import { FormStepper } from '@widgets/stepper'
 import { FormProvider, useForm } from 'react-hook-form'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
-import { defaultAdvantages, schemasYup } from './constants'
+import { defaultAdvantages, SCHEMA_YUP } from './constants'
 import { useChangeUrl } from './hooks/useChangeUrl'
 import {
     BackButton,
@@ -16,6 +16,7 @@ import {
     Layout,
     SubmitButton,
 } from './styled'
+import { useEffect } from 'react'
 
 export const FormPage = () => {
     const { pathname } = useLocation()
@@ -24,11 +25,16 @@ export const FormPage = () => {
     const onSubmit = useSendForm()
 
     const methods = useForm<FormData>({
-        resolver: yupResolver(schemasYup[pathname as RoutePaths]),
+        resolver: yupResolver(SCHEMA_YUP[pathname as RoutePaths]),
         defaultValues: {
-            advantages: defaultAdvantages,
+            [FieldsName.ADVANTAGES]: defaultAdvantages,
         },
     })
+
+    // Если на предыдущих шагах не заполнены поля, значит нужно зайти на форму заново (при перезагрузке страницы)
+    useEffect(() => {
+        if (!methods.getValues(FieldsName.NICKNAME)) navigate(RoutePaths.STEP1)
+    }, [methods, navigate])
 
     const handleNext = async () => {
         const isValid = await methods.trigger()

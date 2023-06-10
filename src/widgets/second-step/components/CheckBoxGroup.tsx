@@ -5,6 +5,7 @@ import { useFormContext } from 'react-hook-form'
 
 export const CheckBoxGroup = () => {
     const { register } = useFormContext()
+
     return (
         <Wrapper>
             <GroupName>CheckBox group</GroupName>
@@ -13,9 +14,9 @@ export const CheckBoxGroup = () => {
                     <CheckBoxWrapper key={id}>
                         <input
                             {...register(FieldsName.CHECKBOX)}
-                            type="checkbox"
+                            type={FieldsName.CHECKBOX}
                             key={id}
-                            name="checkbox"
+                            name={FieldsName.CHECKBOX}
                             id={id}
                             value={value}
                         />

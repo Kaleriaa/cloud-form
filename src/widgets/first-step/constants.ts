@@ -66,7 +66,7 @@ export const SELECT_STYLES_CONFIG: ChakraStylesConfig = {
         fontFamily: 'SB Sans',
         borderRadius: '4px',
         borderColor: 'rgba(0, 0, 0, 0.16)',
-        color: 'rgba(0, 0, 0, 0.48)',
+        color: '#333333',
         fontSize: '14px',
         focusBorderColor: 'rgba(0, 0, 0, 0.48)',
         _focus: {

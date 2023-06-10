@@ -1,8 +1,10 @@
+import { FieldsName } from '@shared/constants'
 import * as yup from 'yup'
+import { SEX_FIELDS } from './constants'
 
 export const FIRST_STEP_SCHEMA = yup
     .object({
-        nickname: yup
+        [FieldsName.NICKNAME]: yup
             .string()
             .max(30)
             .matches(
@@ -10,15 +12,19 @@ export const FIRST_STEP_SCHEMA = yup
                 'Можно использовать только буквы и цифры',
             )
             .required('Обязательно для заполнения'),
-        name: yup
+        [FieldsName.NAME]: yup
             .string()
             .max(50)
             .matches(/^[a-zA-Zа-яА-Я]+$/, 'Должно содержать только буквы')
             .required('Обязательно для заполнения'),
-        surname: yup
+        [FieldsName.SURNAME]: yup
             .string()
             .max(50)
             .matches(/^[a-zA-Zа-яА-Я]+$/, 'Должно содержать только буквы')
             .required('Обязательно для заполнения'),
+        [FieldsName.SEX]: yup
+            .object()
+            .oneOf(SEX_FIELDS, 'Invalid selection')
+            .required('Обязательно для выбора'),
     })
     .required()

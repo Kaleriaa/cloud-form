@@ -20,7 +20,7 @@ export const Success = ({ onClose }: ModalStates) => {
             <ButtonUI
                 label="На главную"
                 onClick={toMainPage}
-                id={FieldsId.TOMAIN}
+                id={FieldsId.TO_MAIN}
             />
         </SuccessWindow>
     )

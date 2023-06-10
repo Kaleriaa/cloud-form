@@ -22,22 +22,24 @@ export const AddAdvantages = ({ label }: AdvantagesProps) => {
     return (
         <WrapperAdvantages>
             <InputLabel label={label} />
-            {fields.map((field, index) => {
+            {fields.map((_, index) => {
                 return (
-                    <Row key={field.id}>
+                    // вообще использование индексов в качестве ключей - не рекомендуются
+                    // Но тут, чтобы id инпута менялся при удалении, нужно чтобы компонент ререндерился
+                    <Row key={index}>
                         <Controller
                             name={`advantages.${index}.value`}
                             control={control}
                             render={({ field }) => (
                                 <Input
                                     {...field}
-                                    id={`field-advantages-${fields.length + 1}`}
+                                    id={`field-advantages-${index + 1}`}
                                 />
                             )}
                         />
                         <Trash
                             src={TrashSVG}
-                            id={`button-remove-${fields.length + 1}`}
+                            id={`button-remove-${index + 1}`}
                             onClick={handleRemove(index)}
                         />
                     </Row>
@@ -45,7 +47,7 @@ export const AddAdvantages = ({ label }: AdvantagesProps) => {
             })}
             <AddButton
                 label="+"
-                id={FieldsId.ADDINPUT}
+                id={FieldsId.ADD_INPUT}
                 onClick={() => append(null)}
             />
         </WrapperAdvantages>

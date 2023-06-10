@@ -6,6 +6,7 @@ import { Line, MainButton, MainFrame } from './styled'
 
 export const MainPage = () => {
     const navigate = useNavigate()
+
     return (
         <MainFrame>
             <PersonalInfo />
