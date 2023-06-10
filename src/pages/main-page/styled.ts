@@ -18,8 +18,8 @@ export const MainFrame = styled.div`
     }
 
     @media (max-width: 426px) {
-        height: 100vh;
-        max-height: 100vh;
+        height: 100dvh;
+        max-height: 100dvh;
         width: 100%;
         padding: 50px 30px;
     }
