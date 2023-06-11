@@ -1,4 +1,4 @@
-import { FormData } from '@entities/form-data/type'
+import { FormData } from '@shared/types/formData'
 import { useSendForm } from '@features/send-form/useSendForm'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { FieldsId, FieldsName, RoutePaths } from '@shared/constants'

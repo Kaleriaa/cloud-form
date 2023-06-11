@@ -8,7 +8,10 @@ export default defineConfig({
         react(),
         tsconfigPaths(),
         splitVendorChunkPlugin(),
-        checker({ typescript: true, eslint: { lintCommand: 'eslint "./src/**/*.{ts,tsx}"' } }),
+        checker({
+            typescript: true,
+            eslint: { lintCommand: 'eslint "./src/**/*.{ts,tsx}"' },
+        }),
     ],
-    base: '/cloud-form/',
+    base: '/cloud-form/#',
 })

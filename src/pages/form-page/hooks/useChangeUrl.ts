@@ -1,4 +1,4 @@
-import { BASE_PATH, RoutePaths } from '@shared/constants'
+import { RoutePaths } from '@shared/constants'
 import { useLocation } from 'react-router-dom'
 
 export const useChangeUrl = () => {
@@ -8,7 +8,7 @@ export const useChangeUrl = () => {
 
     switch (pathname) {
         case RoutePaths.STEP1:
-            back = `${BASE_PATH}/`
+            back = '/'
             next = RoutePaths.STEP2
             break
         case RoutePaths.STEP2:

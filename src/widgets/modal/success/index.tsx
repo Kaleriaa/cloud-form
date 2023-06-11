@@ -1,16 +1,16 @@
-import { Title, Window } from '../styled'
+import { FieldsId } from '@shared/constants'
 import { ButtonUI } from '@shared/ui'
-import SuccessSVG from './success.svg'
-import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom'
-import { BASE_PATH, FieldsId } from '@shared/constants'
+import styled from 'styled-components'
 import { ModalStates } from '..'
+import { Title, Window } from '../styled'
+import SuccessSVG from './success.svg'
 
 export const Success = ({ onClose }: ModalStates) => {
     const navigate = useNavigate()
     const toMainPage = () => {
         onClose()
-        navigate(`${BASE_PATH}/`)
+        navigate('/')
     }
 
     return (

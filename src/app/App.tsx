@@ -9,7 +9,6 @@ import {
     theme,
 } from '@chakra-ui/react'
 import { store } from '@shared/store'
-import { BASE_PATH } from '@shared/constants'
 
 export const App = () => {
     return (
@@ -19,7 +18,7 @@ export const App = () => {
                     <CSSReset />
                     <Modal />
                     <Routes>
-                        <Route path={BASE_PATH} element={<Outlet />}>
+                        <Route element={<Outlet />}>
                             <Route index element={<MainPage />} />
                             <Route
                                 path="form"

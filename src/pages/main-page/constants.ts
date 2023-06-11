@@ -1,4 +1,7 @@
-export const socialLinks = [
+export const socialLinks: {
+    label: string
+    link: string
+}[] = [
     {
         label: 'Telegram',
         link: 'https://t.me/kalerriaa',
@@ -13,7 +16,7 @@ export const socialLinks = [
     },
 ]
 
-export const phoneMask = [
+export const phoneMask: (string | RegExp)[] = [
     '+',
     '7',
     ' ',

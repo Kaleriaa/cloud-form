@@ -1,4 +1,4 @@
-import { FormData } from '@entities/form-data/type'
+import { FormData } from '@shared/types/formData'
 
 export const prepareData = (data: FormData) => {
     const { nickname, name, surname, about } = data

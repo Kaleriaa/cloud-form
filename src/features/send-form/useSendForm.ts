@@ -1,8 +1,8 @@
 import { useAppDispatch } from '@shared/store'
-import { useSendFormMutation } from '../../shared/api'
+import { useSendFormMutation } from '@shared/api'
 import { openModal } from '@entities/modal/slice'
-import { prepareData } from '@features/prepare-data/prepareData'
-import { FormData } from '@entities/form-data/type'
+import { prepareData } from '@shared/utils/prepareData'
+import { FormData } from '@shared/types/formData'
 
 export const useSendForm = () => {
     const [sendForm] = useSendFormMutation()
@@ -11,10 +11,10 @@ export const useSendForm = () => {
     return async (data: FormData) => {
         const formattedData = prepareData(data)
         try {
-            await sendForm(formattedData).unwrap()
+            const { status } = await sendForm(formattedData).unwrap()
             dispatch(
                 openModal({
-                    isSuccess: true,
+                    isSuccess: status === 'success',
                     isVisible: true,
                 }),
             )

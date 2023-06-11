@@ -2,7 +2,11 @@ import { FormWrapperSteps, Input, InputLabel, Tip } from '@shared/ui'
 import { Select } from 'chakra-react-select'
 import { useFormContext, Controller } from 'react-hook-form'
 import styled from 'styled-components'
-import { INPUTS_STEP_1, SELECT_STYLES_CONFIG, SEX_FIELDS } from './constants'
+import {
+    FIRST_STEP_INPUTS,
+    SELECT_STYLES_CONFIG,
+    SEX_FIELDS,
+} from './constants'
 import { FieldsName } from '@shared/constants'
 
 // У React Select нет нормальной возможности установить кастомный id для option'а
@@ -18,7 +22,7 @@ export const FirstStep = () => {
 
     return (
         <FormWrapperSteps>
-            {INPUTS_STEP_1.map(({ id, label, name }) => {
+            {FIRST_STEP_INPUTS.map(({ id, label, name }) => {
                 return (
                     <Wrapper key={id}>
                         <InputLabel label={label} />

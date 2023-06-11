@@ -2,7 +2,7 @@ import { SystemStyleObject } from '@chakra-ui/react'
 import { FieldsId, FieldsName } from '@shared/constants'
 import { ChakraStylesConfig, OptionBase } from 'chakra-react-select'
 
-export const INPUTS_STEP_1: {
+export const FIRST_STEP_INPUTS: {
     label: string
     name: FieldsName
     id: FieldsId
