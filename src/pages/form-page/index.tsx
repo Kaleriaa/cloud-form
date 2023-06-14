@@ -22,7 +22,7 @@ export const FormPage = () => {
     const { pathname } = useLocation()
     const { next, back } = useChangeUrl()
     const navigate = useNavigate()
-    const onSubmit = useSendForm()
+    const { mutate: onSubmit, isLoading } = useSendForm()
 
     const methods = useForm<FormData>({
         resolver: yupResolver(SCHEMA_YUP[pathname as RoutePaths]),
@@ -59,6 +59,7 @@ export const FormPage = () => {
                         <SubmitButton
                             style={BtnStyleConfig}
                             type="submit"
+                            isLoading={isLoading}
                             id={FieldsId.SEND}>
                             Отправить
                         </SubmitButton>

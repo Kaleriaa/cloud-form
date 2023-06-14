@@ -9,7 +9,7 @@ export const formApi = createApi({
     }),
     endpoints: (build) => ({
         sendForm: build.mutation<
-            { status: string },
+            { status: string; message: string },
             ReturnType<typeof prepareData>
         >({
             query: (formData) => ({

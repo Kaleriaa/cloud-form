@@ -6,7 +6,7 @@ import { ModalStates } from '..'
 import { Title, Window } from '../styled'
 import SuccessSVG from './success.svg'
 
-export const Success = ({ onClose }: ModalStates) => {
+export const Success = ({ onClose, message }: ModalStates) => {
     const navigate = useNavigate()
     const toMainPage = () => {
         onClose()
@@ -15,7 +15,7 @@ export const Success = ({ onClose }: ModalStates) => {
 
     return (
         <SuccessWindow>
-            <Title>Форма успешно отправлена</Title>
+            <Title>{message ?? 'Успешно'}</Title>
             <img src={SuccessSVG} />
             <ButtonUI
                 label="На главную"

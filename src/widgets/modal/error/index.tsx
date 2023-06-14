@@ -6,11 +6,11 @@ import { ButtonUI } from '@shared/ui'
 import { FieldsId } from '@shared/constants'
 import { ModalStates } from '..'
 
-export const Error = ({ onClose }: ModalStates) => {
+export const Error = ({ onClose, message }: ModalStates) => {
     return (
         <Window>
             <Header>
-                <Title>Ошибка</Title>
+                <Title>{message ?? 'Ошибка'}</Title>
                 <img src={Close} onClick={onClose} />
             </Header>
             <Image src={ErrorSVG} height={80} width={80} />

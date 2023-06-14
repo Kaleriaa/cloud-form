@@ -21,10 +21,10 @@ export const App = () => {
                         <Route element={<Outlet />}>
                             <Route index element={<MainPage />} />
                             <Route
-                                path="form"
+                                path="create"
                                 element={<Navigate to="step1" />}
                             />
-                            <Route path="form" element={<FormPage />}>
+                            <Route path="create" element={<FormPage />}>
                                 <Route path="step1" element={<FirstStep />} />
                                 <Route path="step2" element={<SecondStep />} />
                                 <Route path="step3" element={<ThirdStep />} />
