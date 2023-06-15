@@ -7,7 +7,7 @@ import {
     SELECT_STYLES_CONFIG,
     SEX_FIELDS,
 } from './constants'
-import { FieldsName } from '@shared/constants'
+import { FieldsName, FieldsId } from '@shared/constants'
 
 // У React Select нет нормальной возможности установить кастомный id для option'а
 const Option = (option: { id: string; label: string }) => {
@@ -47,7 +47,8 @@ export const FirstStep = () => {
                     render={({ field }) => (
                         <Select
                             {...field}
-                            inputId="field-sex"
+                            id={FieldsId.SEX}
+                            classNamePrefix="sex"
                             useBasicStyles
                             // Типы для React Select описаны не совсем точно и getOptionLabel умеет возвращать ReactNode
                             getOptionLabel={Option as unknown as () => string}

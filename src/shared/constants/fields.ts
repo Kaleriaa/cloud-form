@@ -14,7 +14,7 @@ export enum FieldsName {
 export enum FieldsId {
     NICKNAME = 'field-nickname',
     NAME = 'field-name',
-    SURNAME = 'field-sername',
+    SURNAME = 'field-surname',
     ABOUT = 'field-about',
     START = 'button-start',
     BACK = 'button-back',
