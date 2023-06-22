@@ -22,11 +22,9 @@ export const AddAdvantages = ({ label }: AdvantagesProps) => {
     return (
         <WrapperAdvantages>
             <InputLabel label={label} />
-            {fields.map((_, index) => {
+            {fields.map(({ id }, index) => {
                 return (
-                    // вообще использование индексов в качестве ключей - не рекомендуются
-                    // Но тут, чтобы id инпута менялся при удалении, нужно чтобы компонент ререндерился
-                    <Row key={index}>
+                    <Row key={id}>
                         <Controller
                             name={`advantages.${index}.value`}
                             control={control}
